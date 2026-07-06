@@ -1,0 +1,259 @@
+/* ============================================================
+   MI MEJOR AMIGO — Sistema de diseño
+   Extraído del Figma (placa Inicio, Nosotros y Consulta)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+  /* Paleta */
+  --crema:        #fbf5e7;  /* fondo */
+  --crema-oscura: #efe7d3;  /* fondo del escritorio (marco) */
+  --tinta:        #252421;  /* texto principal */
+  --azul:         #b7e7fc;  /* pastel celeste */
+  --amarillo:     #f4edc1;  /* pastel amarillo */
+  --lavanda:      #fae6ff;  /* pastel rosa/lavanda */
+  --menta:        #9fddcf;  /* pastel verde menta */
+  --azul-fuerte:  #1e9cd3;  /* botones / acentos */
+  --rojo-urgencia:#e2564a;  /* emergencias */
+
+  /* Tipografía */
+  --fuente: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Layout */
+  --margen: 22px;
+  --radio: 26px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--fuente);
+  color: var(--tinta);
+  background: var(--crema-oscura);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* La "pantalla" del teléfono */
+.pantalla {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: var(--crema);
+  padding: 0 var(--margen) 48px;
+  position: relative;
+}
+
+/* ---------- Header: logo + hamburguesa ---------- */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 24px;
+}
+.logo {
+  font-weight: 900;
+  font-size: 17px;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  color: var(--tinta);
+  text-decoration: none;
+}
+.menu {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--tinta);
+  border-radius: 3px;
+}
+
+/* ---------- Tipografía de página ---------- */
+.titulo {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(46px, 16vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -1px;
+  margin: 8px 0 28px;
+}
+.subtitulo {
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+.texto {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.38;
+  color: var(--tinta);
+}
+.etiqueta {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--tinta);
+  margin: 0 0 8px;
+}
+.seccion { margin-bottom: 34px; }
+
+/* ---------- Tarjetas ---------- */
+.card {
+  border-radius: var(--radio);
+  padding: 24px;
+}
+.card--azul     { background: var(--azul); }
+.card--amarillo { background: var(--amarillo); }
+.card--lavanda  { background: var(--lavanda); }
+.card--menta    { background: var(--menta); }
+
+/* Placeholder de foto / mapa */
+.foto {
+  border-radius: var(--radio);
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--tinta);
+  margin-top: 16px;
+}
+
+/* Grilla 2x2 (para Inicio) */
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.grilla .card {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 20px;
+}
+.grilla .flecha {
+  align-self: flex-end;
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* ---------- Botón grande ---------- */
+.boton {
+  display: block;
+  width: 100%;
+  background: var(--azul-fuerte);
+  color: var(--crema);
+  border: none;
+  border-radius: var(--radio);
+  padding: 26px;
+  font-family: var(--fuente);
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.boton--urgencia { background: var(--rojo-urgencia); }
+
+/* ---------- Chips de especialidad / valores ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chip {
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  background: var(--azul);
+}
+
+/* ---------- Tarjeta de veterinario ---------- */
+.vet {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-radius: var(--radio);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.vet__avatar {
+  flex: 0 0 auto;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(37, 36, 33, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+.vet__nombre { font-weight: 700; font-size: 19px; }
+.vet__esp    { font-weight: 500; font-size: 15px; margin-top: 2px; }
+.vet__dato   { font-weight: 500; font-size: 13px; opacity: 0.75; margin-top: 6px; }
+
+/* ---------- Fila de datos (contacto) ---------- */
+.dato {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.dato__label { font-weight: 700; font-size: 16px; }
+.dato__valor { font-weight: 500; font-size: 18px; }
+
+/* ---------- Portal: enlaces, inputs, navegación ---------- */
+
+/* Que las tarjetas usadas como enlace no se vean como links */
+a.card, a.vet { text-decoration: none; color: var(--tinta); }
+
+/* Campo de formulario (input / select) estilo pastel */
+.campo {
+  width: 100%;
+  background: var(--azul);
+  border: none;
+  border-radius: var(--radio);
+  padding: 22px;
+  font-family: var(--fuente);
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--tinta);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.campo::placeholder { color: rgba(37, 36, 33, 0.45); }
+.campo:focus { outline: 3px solid var(--azul-fuerte); outline-offset: 2px; }
+select.campo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23252421' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  padding-right: 54px;
+}
+
+/* Link de volver */
+.volver {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--azul-fuerte);
+  text-decoration: none;
+  margin: 4px 0 4px;
+}
