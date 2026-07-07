@@ -278,10 +278,6 @@ select.campo {
   margin: 4px 0 4px;
 }
 
-/* ========================================================
-   AGREGADO PARA EL MENÚ DESPLEGABLE (Mantiene tu diseño)
-   ======================================================== */
-
 .top {
     position: relative;
 }
@@ -289,23 +285,23 @@ select.campo {
 .nav-menu {
     position: absolute;
     top: 100%; 
-    left: 00;
+    left: 0;
     width: 100%;
     background-color: #f7f4eb; 
     display: none; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     z-index: 999; 
-    border-radius: 0 0 15px 15px; 
+    border-radius: 15px 0 15px 15px; 
 }
 
 .nav-menu ul {
     list-style: none;
-    padding: 100px;
-    margin: 0;
+    padding: 25px;
+    margin: 10;
 }
 
 .nav-menu ul li {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     text-align: right;
 }
 
@@ -336,7 +332,7 @@ select.campo {
   flex-direction: column;
   padding-right: 48px;   
   padding-bottom: 50px;  
-  background-image: url('perro-con-vete_02.jpg');
+  background-image: url('perro-con-vete_01.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;   
