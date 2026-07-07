@@ -1,6 +1,6 @@
 <?php
 /* Cabecera reutilizable.
-   Definí $titulo y $inicio antes de incluir este archivo. */
+   Definí $titulo, $inicio y (opcional) $clase_main antes de incluir este archivo. */
 $titulo = $titulo ?? 'Mi Mejor Amigo';
 $inicio = $inicio ?? 'portal.php';
 ?>
@@ -13,10 +13,10 @@ $inicio = $inicio ?? 'portal.php';
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <main class="pantalla">
+  <main class="pantalla<?= isset($clase_main) ? ' ' . $clase_main : '' ?>">
     <header class="top">
       <a href="<?= $inicio ?>" class="logo">Mi Mejor Amigo</a>
-      
+
       <button class="menu" id="btn-menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -28,6 +28,7 @@ $inicio = $inicio ?? 'portal.php';
           <li><a href="nosotros.php">Nosotros</a></li>
           <li><a href="especialidades.php">Especialidades y Staff</a></li>
           <li><a href="contacto.php">Contacto y Emergencias</a></li>
+          <li><a href="login.php">Ingresar</a></li>
         </ul>
       </nav>
     </header>

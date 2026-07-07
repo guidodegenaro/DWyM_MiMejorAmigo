@@ -24,7 +24,7 @@ $inicio = 'index.php';
 include 'cabecera.php';
 ?>
 
-    <h1 class="titulo">Portal</h1>
+    <h1 class="titulo">Ingresar</h1>
     <p class="texto">Ingresá con tu DNI para ver tus mascotas y tu historial clínico.</p>
 
     <form method="post" class="seccion" style="margin-top:26px">
@@ -39,6 +39,10 @@ include 'cabecera.php';
 
     <p class="texto" style="font-size:14px;opacity:.6;margin-top:8px">
       Datos de prueba: DNI 30111222 (Manuel Sánchez).
+    </p>
+
+    <p style="font-size:14px;margin-top:10px">
+      <a href="registro.php" style="color:var(--azul-fuerte);text-decoration:none">Crear nuevo usuario</a>
     </p>
 
 <?php include 'pie.php'; ?>

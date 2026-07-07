@@ -27,7 +27,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-y: scroll; }
 
 body {
   font-family: var(--fuente);
@@ -106,7 +106,7 @@ body {
   font-weight: 500;
   font-size: 13px;
   color: var(--tinta);
-  margin: 0 0 8px;
+  margin: 0 0 14px;
 }
 .seccion { margin-bottom: 34px; }
 
@@ -289,7 +289,7 @@ select.campo {
 /* Cada opción del menú */
 .nav-menu ul li {
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .nav-menu ul li:last-child {
@@ -314,4 +314,20 @@ select.campo {
 /* CLASE MÁGICA: JavaScript activará esto al hacer clic en las 3 rayitas */
 .nav-menu.activo {
     display: block; /* Se muestra el menú */
+}
+
+/* ---------- Home (Inicio): fondo + contenido pegado abajo ---------- */
+.pantalla--home {
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;   /* un poco más de aire a la derecha */
+  padding-bottom: 50px;  /* margen inferior pedido */
+  background-image: url('perro-con-vete_01.jpeg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+/* Empuja el título + la grilla hacia el borde inferior */
+.pantalla--home .home__contenido {
+  margin-top: auto;
 }
