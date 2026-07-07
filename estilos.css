@@ -320,7 +320,7 @@ select.campo {
 .pantalla--home {
   display: flex;
   flex-direction: column;
-  padding-right: 30px;   /* un poco más de aire a la derecha */
+  padding-right: 48px;   /* más aire a la derecha (achica los cuadros) */
   padding-bottom: 50px;  /* margen inferior pedido */
   background-image: url('perro-con-vete_01.jpeg');
   background-repeat: no-repeat;
