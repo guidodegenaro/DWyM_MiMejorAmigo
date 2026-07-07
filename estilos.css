@@ -324,8 +324,8 @@ select.campo {
   padding-bottom: 50px;  /* margen inferior pedido */
   background-image: url('perro-con-vete_01.jpeg');
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;   /* rellena toda la pantalla (fill), detrás del texto */
 }
 /* Empuja el título + la grilla hacia el borde inferior */
 .pantalla--home .home__contenido {
