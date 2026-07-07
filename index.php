@@ -42,16 +42,18 @@
 
   <div class="galeria">
     <div class="item">
-      <div class="marco"><iframe src="nosotros.html" scrolling="no"></iframe></div>
-      <div class="nombre">Nosotros<br><a href="nosotros.html" target="_blank">abrir pantalla ↗</a></div>
+      <div class="marco"><iframe src="nosotros.php" scrolling="no"></iframe></div>
+      <div class="nombre">Nosotros<br><a href="nosotros.php">abrir pantalla ↗</a></div>
     </div>
+
     <div class="item">
-      <div class="marco"><iframe src="especialidades.html" scrolling="no"></iframe></div>
-      <div class="nombre">Especialidades y Staff<br><a href="especialidades.html" target="_blank">abrir pantalla ↗</a></div>
+      <div class="marco"><iframe src="especialidades.php" scrolling="no"></iframe></div>
+      <div class="nombre">Especialidades y Staff<br><a href="especialidades.php">abrir pantalla ↗</a></div>
     </div>
+
     <div class="item">
-      <div class="marco"><iframe src="contacto.html" scrolling="no"></iframe></div>
-      <div class="nombre">Contacto y Emergencias<br><a href="contacto.html" target="_blank">abrir pantalla ↗</a></div>
+      <div class="marco"><iframe src="contacto.php" scrolling="no"></iframe></div>
+      <div class="nombre">Contacto y Emergencias<br><a href="contacto.php">abrir pantalla ↗</a></div>
     </div>
   </div>
 </body>

@@ -257,3 +257,61 @@ select.campo {
   text-decoration: none;
   margin: 4px 0 4px;
 }
+/* ========================================================
+   AGREGADO PARA EL MENÚ DESPLEGABLE (Mantiene tu diseño)
+   ======================================================== */
+
+/* Asegura que el header maneje la posición del menú flotante */
+.top {
+    position: relative;
+}
+
+/* El menú oculto por defecto (se posiciona debajo del header) */
+.nav-menu {
+    position: absolute;
+    top: 100%; /* Se despliega justo abajo de la cabecera */
+    left: 0;
+    width: 100%;
+    background-color: #f7f4eb; /* Usamos el color cremita de tu fondo */
+    display: none; /* Oculto por defecto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para darle volumen */
+    z-index: 999; /* Para que quede por encima del contenido de las pantallas */
+    border-radius: 0 0 15px 15px; /* Bordes redondeados abajo para hacer juego con tu diseño */
+}
+
+/* Lista de enlaces */
+.nav-menu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Cada opción del menú */
+.nav-menu ul li {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-menu ul li:last-child {
+    margin-bottom: 0; /* Quita el margen al último elemento */
+}
+
+/* Estilo de los textos de los enlaces */
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #000000; /* Negro como tus títulos */
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+/* Efecto opcional al pasar el mouse o tocar (feedback visual) */
+.nav-menu ul li a:hover {
+    color: #555555; 
+}
+
+/* CLASE MÁGICA: JavaScript activará esto al hacer clic en las 3 rayitas */
+.nav-menu.activo {
+    display: block; /* Se muestra el menú */
+}

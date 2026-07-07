@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosotros — Mi Mejor Amigo</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <main class="pantalla">
+<?php
+// Definimos las variables para que las use "cabecera.php"
+$titulo = "Nosotros — Mi Mejor Amigo";
+$inicio = "nosotros.php"; // Si renombraste este archivo a index.php, cambiá esto por "index.php"
 
-    <header class="top">
-      <a href="index.html" class="logo">Mi Mejor Amigo</a>
-      <button class="menu" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-    </header>
+include 'cabecera.php'; 
+?>
 
     <h1 class="titulo">Nosotros</h1>
 
@@ -43,6 +33,7 @@
       </div>
     </section>
 
-  </main>
-</body>
-</html>
+<?php 
+// Traemos el pie de página que cierra las etiquetas e incluye el JavaScript de las 3 rayitas
+include 'pie.php'; 
+?>

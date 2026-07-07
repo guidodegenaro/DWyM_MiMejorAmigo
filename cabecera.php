@@ -16,7 +16,16 @@ $inicio = $inicio ?? 'portal.php';
   <main class="pantalla">
     <header class="top">
       <a href="<?= $inicio ?>" class="logo">Mi Mejor Amigo</a>
-      <button class="menu" aria-label="Abrir menú">
+      
+      <button class="menu" id="btn-menu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
+
+      <nav class="nav-menu" id="nav-enlaces">
+        <ul>
+          <li><a href="nosotros.php">Nosotros</a></li>
+          <li><a href="especialidades.php">Especialidades y Staff</a></li>
+          <li><a href="contacto.php">Contacto y Emergencias</a></li>
+        </ul>
+      </nav>
     </header>
