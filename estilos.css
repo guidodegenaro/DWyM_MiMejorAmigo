@@ -7,7 +7,7 @@
 
 :root {
   /* Paleta */
-  --crema:        #fbf5e7;  /* fondo */
+  --crema:         #fbf5e7;  /* fondo */
   --crema-oscura: #efe7d3;  /* fondo del escritorio (marco) */
   --tinta:        #252421;  /* texto principal */
   --azul:         #b7e7fc;  /* pastel celeste */
@@ -183,6 +183,14 @@ body {
   padding: 10px 18px;
   border-radius: 100px;
   background: var(--azul);
+  display: inline-block;
+  transition: outline 0.1s ease;
+}
+
+/* Borde azul al interactuar con los chips */
+.chip:hover, .chip:focus {
+  outline: 3px solid var(--azul-fuerte);
+  outline-offset: 2px;
 }
 
 /* ---------- Tarjeta de veterinario ---------- */
@@ -193,6 +201,7 @@ body {
   border-radius: var(--radio);
   padding: 18px 20px;
   margin-bottom: 14px;
+  transition: outline 0.1s ease; /* Transición suave para el foco */
 }
 .vet__avatar {
   flex: 0 0 auto;
@@ -209,6 +218,12 @@ body {
 .vet__nombre { font-weight: 700; font-size: 19px; }
 .vet__esp    { font-weight: 500; font-size: 15px; margin-top: 2px; }
 .vet__dato   { font-weight: 500; font-size: 13px; opacity: 0.75; margin-top: 6px; }
+
+/* NUEVO: Borde azul al pasar el mouse o hacer foco en las tarjetas de la cartilla */
+.vet:hover, .vet:focus {
+  outline: 3px solid var(--azul-fuerte);
+  outline-offset: 2px;
+}
 
 /* ---------- Fila de datos (contacto) ---------- */
 .dato {
@@ -238,9 +253,18 @@ a.card, a.vet { text-decoration: none; color: var(--tinta); }
   color: var(--tinta);
   -webkit-appearance: none;
   appearance: none;
+  margin-top: 8px; 
+  display: block;  
 }
 .campo::placeholder { color: rgba(37, 36, 33, 0.45); }
-.campo:focus { outline: 3px solid var(--azul-fuerte); outline-offset: 2px; }
+
+/* Evita desplazamientos extraños que tapen el label al clickear */
+.campo:focus { 
+  outline: 3px solid var(--azul-fuerte); 
+  outline-offset: 2px; 
+  transform: none !important; 
+}
+
 select.campo {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23252421' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -257,77 +281,71 @@ select.campo {
   text-decoration: none;
   margin: 4px 0 4px;
 }
+
 /* ========================================================
    AGREGADO PARA EL MENÚ DESPLEGABLE (Mantiene tu diseño)
    ======================================================== */
 
-/* Asegura que el header maneje la posición del menú flotante */
 .top {
     position: relative;
 }
 
-/* El menú oculto por defecto (se posiciona debajo del header) */
 .nav-menu {
     position: absolute;
-    top: 100%; /* Se despliega justo abajo de la cabecera */
+    top: 100%; 
     left: 0;
     width: 100%;
-    background-color: #f7f4eb; /* Usamos el color cremita de tu fondo */
-    display: none; /* Oculto por defecto */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para darle volumen */
-    z-index: 999; /* Para que quede por encima del contenido de las pantallas */
-    border-radius: 0 0 15px 15px; /* Bordes redondeados abajo para hacer juego con tu diseño */
+    background-color: #f7f4eb; 
+    display: none; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+    border-radius: 0 0 15px 15px; 
 }
 
-/* Lista de enlaces */
 .nav-menu ul {
     list-style: none;
     padding: 20px;
     margin: 0;
 }
 
-/* Cada opción del menú */
 .nav-menu ul li {
     margin-bottom: 20px;
     text-align: left;
 }
 
 .nav-menu ul li:last-child {
-    margin-bottom: 0; /* Quita el margen al último elemento */
+    margin-bottom: 0; 
 }
 
-/* Estilo de los textos de los enlaces */
 .nav-menu ul li a {
     text-decoration: none;
-    color: #000000; /* Negro como tus títulos */
+    color: #000000; 
     font-size: 1.2rem;
     font-weight: bold;
     display: block;
     transition: color 0.2s ease;
 }
 
-/* Efecto opcional al pasar el mouse o tocar (feedback visual) */
 .nav-menu ul li a:hover {
     color: #555555; 
 }
 
-/* CLASE MÁGICA: JavaScript activará esto al hacer clic en las 3 rayitas */
 .nav-menu.activo {
-    display: block; /* Se muestra el menú */
+    display: block; 
 }
 
 /* ---------- Home (Inicio): fondo + contenido pegado abajo ---------- */
 .pantalla--home {
   display: flex;
   flex-direction: column;
-  padding-right: 48px;   /* más aire a la derecha (achica los cuadros) */
-  padding-bottom: 50px;  /* margen inferior pedido */
+  padding-right: 48px;   
+  padding-bottom: 50px;  
   background-image: url('perro-con-vete_01.jpeg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;   /* rellena toda la pantalla (fill), detrás del texto */
+  background-size: cover;   
 }
-/* Empuja el título + la grilla hacia el borde inferior */
+
 .pantalla--home .home__contenido {
   margin-top: auto;
 }
