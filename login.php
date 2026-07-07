@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $titulo = 'Ingresar — Mi Mejor Amigo';
-$inicio = 'index.html';
+$inicio = 'index.php';
 include 'cabecera.php';
 ?>
 

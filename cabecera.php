@@ -23,6 +23,8 @@ $inicio = $inicio ?? 'portal.php';
 
       <nav class="nav-menu" id="nav-enlaces">
         <ul>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="consulta.php">Agendar una consulta</a></li>
           <li><a href="nosotros.php">Nosotros</a></li>
           <li><a href="especialidades.php">Especialidades y Staff</a></li>
           <li><a href="contacto.php">Contacto y Emergencias</a></li>

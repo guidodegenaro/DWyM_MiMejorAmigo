@@ -1,7 +1,7 @@
 <?php
 // Definimos las variables para que las use "cabecera.php"
 $titulo = "Nosotros — Mi Mejor Amigo";
-$inicio = "nosotros.php"; // Si renombraste este archivo a index.php, cambiá esto por "index.php"
+$inicio = "index.php";
 
 include 'cabecera.php'; 
 ?>
